@@ -1,0 +1,25 @@
+{
+  "name": "findafriend-api",
+  "version": "1.0.0",
+  "description": "API para a adoção de animais",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.4"
+  },
+  "dependencies": {
+    "-": "^0.0.1",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.1",
+    "prisma": "^5.17.0",
+    "zod": "^3.23.8"
+  }
+}
