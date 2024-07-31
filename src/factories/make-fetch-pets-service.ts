@@ -1,12 +1,12 @@
 import { PrismaOrgsRepository } from "../repositories/prisma/prisma-orgs-repository";
 import { PrismaPetsRepository } from "../repositories/prisma/prisma-pets-repository";
-import { FetchPetsByCityService } from "../services/fetch-pets-by-city-service";
+import { FetchPetsService } from "../services/fetch-pets-service";
 
-export function MakeFetchPetsByCityService() {
+export function MakeFetchPetsService() {
   const orgsRepository = new PrismaOrgsRepository();
   const petsRepository = new PrismaPetsRepository();
 
-  const service = new FetchPetsByCityService(petsRepository, orgsRepository);
+  const service = new FetchPetsService(petsRepository, orgsRepository);
 
   return service;
 }
