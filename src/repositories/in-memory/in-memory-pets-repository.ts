@@ -24,14 +24,8 @@ export class InMemoryPetsRepository implements PetsRepository {
     return pet;
   }
 
-  async fetchByCity(city: string): Promise<Pet[]> {
-    const orgsRepository = new InMemoryOrgsRepository();
-
-    const orgsInCity = orgsRepository.orgs
-      .filter((item) => item.city.includes(city))
-      .map((org) => org.id);
-
-    const pets = await this.pets.filter((item) => orgsInCity.includes(item.id));
+  async fetchByOrgIds(orgIds: string[]): Promise<Pet[]> {
+    const pets = await this.pets.filter((item) => orgIds.includes(item.orgId));
 
     return pets;
   }

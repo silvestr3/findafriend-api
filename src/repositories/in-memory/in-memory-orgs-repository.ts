@@ -34,4 +34,10 @@ export class InMemoryOrgsRepository implements OrgsRepository {
 
     return org === undefined ? null : org;
   }
+
+  async fetchByCity(city: string): Promise<Org[]> {
+    const orgs = this.orgs.filter((item) => item.city.includes(city));
+
+    return orgs;
+  }
 }
